@@ -1,24 +1,28 @@
 <?php
 
+namespace Capstone\Model;
+
 use App\Database;
+use Movies;
 
 /**
  * Author: Jay Jones
  * Date: 6/8/2025
- * File: movie_model.class.php
+ * File: MovieModel.php
  * Description: The movie model.
  * Code belongs to Dr. Louie Zhu, with adjustments used for the purposes
  * of this project.
  */
-
-class MovieModel {
+class MovieModel
+{
     //private members
     private $db;
     private $dbConnection;
     static private $_instance = NULL;
     private $tblMovies;
 
-    private function __construct() {
+    private function __construct()
+    {
         $this->db = Database::getDatabase();
         $this->dbConnection = $this->db->getConnection();
         $this->tblMovies = $this->db->getMovies();
@@ -33,14 +37,16 @@ class MovieModel {
     }
 
     //method to ensure one movie model
-    public static function getMovieModel() {
+    public static function getMovieModel()
+    {
         if (self::$_instance == NULL) {
             self::$_instance = new MovieModel();
         }
         return self::$_instance;
     }
 
-    public function list_movies() {
+    public function list_movies()
+    {
         $sql = "SELECT * FROM " . $this->tblMovies;
 
         $query = $this->dbConnection->query($sql);
@@ -65,7 +71,8 @@ class MovieModel {
         return $movies;
     }
 
-    public function view_movies($id) {
+    public function view_movies($id)
+    {
         $sql = "SELECT * FROM " . $this->tblMovies . "WHERE " . $this->tblMovies . ".$id='$id'";
 
         //execute

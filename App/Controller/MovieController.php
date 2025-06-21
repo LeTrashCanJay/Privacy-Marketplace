@@ -1,12 +1,15 @@
 <?php
+
+namespace Capstone\Controller;
+use Capstone\Model\MovieModel;
+
 /**
  * Author: Jay Jones
  * Date: 6/8/2025
- * File: movie_controller.class.php
+ * File: MovieController.php
  * Description: Controller for the movie items
  * Code belongs to Dr. Louie Zhu with minor adjustments for my purposes.
  */
-
 class MovieController
 {
     private $movie_model;

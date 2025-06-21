@@ -1,12 +1,12 @@
 <?php
+
+namespace Capstone\View;
 /**
  * Author: Jay Jones
  * Date: 6/8/2025
  * File: index_view.class.php
  * Description:
  */
-
-
 class IndexView
 {
     public static function displayHeader($page_title)
@@ -43,7 +43,7 @@ class IndexView
         <br><br><br>
         <div id="push"></div>
         </div>
-         <div id="footer"><br>&copy <?=date('Y')?>Privacy Marketplace Project</div>
+        <div id="footer"><br>&copy <?= date('Y') ?>Privacy Marketplace Project</div>
         </body>
         </html>
         <?php

@@ -7,7 +7,9 @@
  * Code belongs to Dr. Louie Zhu, who I could not get this far without.
  */
 
-require_once 'views/index_view.class.php';
+use Capstone\View\IndexView;
+
+require_once 'View/IndexView.php';
 require_once __DIR__ . '/config.php';
 $page_title = "Error";
 //display render

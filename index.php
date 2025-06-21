@@ -6,10 +6,12 @@
  * Description:
  */
 
-require_once("app\Dispatcher.php");
+require_once("App\Dispatcher.php");
 
-require_once ("app\config.php");
+require_once("App\config.php");
 
 require_once ("vendor\autoload.php");
 
-new \App\Dispatcher();
+use Capstone\Dispatcher;
+
+Dispatcher::dispatch();

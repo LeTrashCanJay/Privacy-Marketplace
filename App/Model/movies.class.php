@@ -6,7 +6,7 @@
  * Description:
  */
 
-namespace models;
+namespace Capstone\Model;
 
 class Movies
 {

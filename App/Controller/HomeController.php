@@ -2,12 +2,17 @@
 /**
  * Author: Jay Jones
  * Date: 6/14/2025
- * File: home_controller.class.php
+ * File: HomeController.php
  * Description:
  */
 
+namespace Capstone\Controller;
+
+use Capstone\View\home\HomeIndex;
+
 class HomeController {
     public function index() {
+        echo "HomeController index loaded.";
         $view = new HomeIndex();
         $view->display();
     }
