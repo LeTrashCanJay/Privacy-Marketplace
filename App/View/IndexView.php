@@ -28,14 +28,16 @@ class IndexView
         <div id="banner">
             <a href="<?= BASE_URL ?>/index.php" style="text-decoration: none" title="Digital Privacy Marketplace">
                 <div id="left">
-                    <div style='color: #000; font-size: 14pt; font-weight: bold'>An interactive application designed
-                        with MVC pattern
+                    <img src="<?= BASE_URL ?>/public/images/Privacy.png" style="width: 110px; border: none" alt="logo"/>
+                    <span style='color: #000; font-size: 36pt; font-weight: bold; vertical-align: top'> Privacy Market</span>
+                    <div style='color: #000; font-size: 14pt; font-weight: bold'>Learn what you give away with each
+                        cookie.
                     </div>
                 </div>
             </a>
         </div>
         <?php
-    }
+    } //display header end
 
     public static function displayFooter()
     {
@@ -43,7 +45,7 @@ class IndexView
         <br><br><br>
         <div id="push"></div>
         </div>
-        <div id="footer"><br>&copy <?= date('Y') ?>Privacy Marketplace Project</div>
+        <div id="footer"><br>&copy <?= date('Y') ?> Privacy Marketplace Project</div>
         </body>
         </html>
         <?php

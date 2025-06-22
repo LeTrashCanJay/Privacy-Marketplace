@@ -22,19 +22,19 @@ class HomeIndex extends IndexView
         <br>
 
         <div id="thumbnails" style="text-align: center; border: none">
-            <p>placeholder</p>
+            <p>Click the images to explore each storefront.</p>
 
             <a href="<?= BASE_URL ?>/movie/index">
-                <img src="<?= BASE_URL ?>/www/img/movies.jpg" title="Movie Library"/>
+                <img src="<?= BASE_URL ?>/public/images/thumbnails/Movie.jpeg" title="Movie Library"/>
             </a>
-            <a href="<?= BASE_URL ?>/book/index">
-                <img src="<?= BASE_URL ?>/www/img/books.jpg" title="Book Library"/>
+            <a href="<?= BASE_URL ?>/ebook/index">
+                <img src="<?= BASE_URL ?>/public/images/thumbnails/Ebook.jpeg" title="Book Library"/>
             </a>
-            <a href="#">
-                <img src="<?= BASE_URL ?>/www/img/games.jpg" title="Game Library"/>
+            <a href="<?= BASE_URL ?>/games/index">
+                <img src="<?= BASE_URL ?>/public/images/thumbnails/Games.jpeg" title="Game Library"/>
             </a>
-            <a href="#">
-                <img src="<?= BASE_URL ?>/www/img/music.jpg" title="Music Library (Under Construction)"/>
+            <a href="<?= BASE_URL ?>/apps/index">
+                <img src="<?= BASE_URL ?>/public/images/thumbnails/Webapp.jpeg" title="Music Library (Under Construction)"/>
             </a>
         </div>
         <br>

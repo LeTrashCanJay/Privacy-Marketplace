@@ -33,6 +33,7 @@ footer {
     color: white;
     padding: 1rem;
     text-align: center;
+    font-size: 80%;
 }
 
 #wrapper {
@@ -40,7 +41,7 @@ footer {
     height: auto !important;
     height: 100%;
     margin: 0 auto -4em;
-    text-align:center;
+    text-align:left;
     width:960px;
 }
 
@@ -58,7 +59,7 @@ footer {
 
 #banner {
     background-color: silver;
-    height: 125px;
+    height: 160px;
 }
 
 #banner #left{
@@ -75,6 +76,21 @@ footer {
     text-align: center;
 }
 
+#main-header {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+}
+
+.navBar{
+    font-family: "Verdana", sans-serif;
+    display: flex;
+    color: black;
+}
+
 .container {
     width: 80%;
     margin: auto;
@@ -89,13 +105,15 @@ footer {
 }
 
 .btn-primary {
-    background-color: #007bff;
-    color: white;
-    border: none;
+    background-color: gray;
+    background: 5px;
+    color: black;
+    border: 5px;
 }
 
 .btn-primary:hover {
     background-color: #0056b3;
+    background: 5px;
 }
 
 .store-grid {
@@ -110,4 +128,29 @@ footer {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
+}
+
+
+#thumbnails a {
+    text-decoration: none;
+}
+
+#thumbnails a:hover {
+    text-decoration: none;
+}
+
+#thumbnails img {
+    border: solid 3px #448C9A;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 1px;
+    width: 150px;
+
+    /*for Firefox */
+    -moz-border-radius: 10px;
+}
+
+#thumbnails img:hover {
+    border: solid 6px #393ECE;
+    margin: 2px
 }

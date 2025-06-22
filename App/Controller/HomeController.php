@@ -12,7 +12,6 @@ use Capstone\View\home\HomeIndex;
 
 class HomeController {
     public function index() {
-        echo "HomeController index loaded.";
         $view = new HomeIndex();
         $view->display();
     }
