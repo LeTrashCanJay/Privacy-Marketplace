@@ -6,17 +6,16 @@
  * Description:
  */
 
-namespace Capstone\Model;
+namespace Capstone\Model\Movies;
 
-class Movies
+class Movie
 {
     //private members
-    private $id, $title, $description, $price, $image_url;
+    private $id, $title, $price, $image_url;
 
     //construct it
-    public function __construct($id, $title, $description, $price, $image_url) {
+    public function __construct($title, $price, $image_url) {
         $this->title = $title;
-        $this->description = $description;
         $this->price = $price;
         $this->image_url = $image_url;
     }
@@ -28,10 +27,6 @@ class Movies
 
     public function getTitle() {
         return $this->title;
-    }
-
-    public function getDescription() {
-        return $this->description;
     }
 
     public function getPrice() {

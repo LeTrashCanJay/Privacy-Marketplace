@@ -14,3 +14,27 @@ date_default_timezone_set('America/New_York');
 
 //base url
 define("BASE_URL", "http://localhost/capstone/");
+
+/*****
+ * movies
+ */
+
+define("MOVIE_IMG", "public/images/movies");
+
+/**
+ * web-apps
+ */
+
+define("APP_IMG", "public/images/webapps");
+
+/**
+ * games
+ */
+
+define("GAME_IMG", "public/images/games");
+
+/**
+ * ebooks
+ */
+
+define("BOOK_IMG", "public/images/ebooks");

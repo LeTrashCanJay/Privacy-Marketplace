@@ -1,9 +1,9 @@
 <?php
 
-namespace Capstone\Model;
+namespace Capstone\Model\Movies;
 
 use App\Database;
-use Movies;
+use Capstone\Model\Movies;
 
 /**
  * Author: Jay Jones
@@ -62,7 +62,7 @@ class MovieModel
         $movies = array();
 
         while ($obj = $query->fetch_object()) {
-            $movie = new Movies(stripslashes($obj->title), stripslashes($obj->description), stripslashes($obj->price), stripslashes($obj->image_url));
+            $movie = new Movie(stripslashes($obj->title), stripslashes($obj->price), stripslashes($obj->image_url));
 
             $movie->setId($obj->id);
 
@@ -82,10 +82,14 @@ class MovieModel
             $obj = $query->fetch_object();
 
             //create movie object
-            $movie = new Movies(stripslashes($obj->title), stripslashes($obj->description), stripslashes($obj->price), stripslashes($obj->image_url));
+            $movie = new Movie(stripslashes($obj->title), stripslashes($obj->price), stripslashes($obj->image_url));
 
             //set id
             $movie->setId($obj->id);
+
+            return $movie;
         }
+
+        return false;
     }
 }

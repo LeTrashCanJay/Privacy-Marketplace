@@ -130,6 +130,12 @@ footer {
     border-radius: 8px;
 }
 
+.grid-container{
+    margin: 10px auto 10px auto;
+    width: 960px;
+    border: 1px solid #eee;
+    background-color: #ffebeb;
+}
 
 #thumbnails a {
     text-decoration: none;

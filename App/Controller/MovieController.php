@@ -1,7 +1,11 @@
 <?php
 
 namespace Capstone\Controller;
-use Capstone\Model\MovieModel;
+
+use Capstone\Model\Movies\MovieModel;
+use Capstone\View\movie\index\MovieIndex;
+use Capstone\View\movie\detail\MovieDetail;
+use Capstone\View\movie\error\MovieError;
 
 /**
  * Author: Jay Jones
@@ -21,5 +25,38 @@ class MovieController
     }
 
     //index action
+    public function index() {
+        $movies = $this->movie_model->list_movies();
+        if(!$movies) {
+            //toss an error
+            $message = "We've had an issue with displaying the movies. Please try again later.";
+            $this->error($message);
+        }
 
+        $view = new MovieIndex();
+        $view->display($movies);
+
+    }
+
+    public function detail($id) {
+        //retrieve specific movie
+        $movie = $this->movie_model->view_movies($id);
+
+        if (!$movie) {
+            $message = "There was an issue displaying the movie id='".$id."'.";
+            $this->error($message);
+            return;
+        }
+
+        $view = new MovieDetail();
+        $view->display($movie);
+
+    }
+
+    //handle ya errors
+    public function error($message) {
+        $error = new MovieError();
+
+        $error->display($message);
+    }
 }
