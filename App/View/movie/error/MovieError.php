@@ -11,7 +11,13 @@ namespace Capstone\View\movie\error;
 use Capstone\View\movie\MovieIndexView;
 
 class MovieError extends MovieIndexView {
-    public function display($message) {
+    private string $message;
+
+    public function __construct(string $message = "An unknown error occurred.") {
+        $this->message = $message;
+    }
+
+    public function display() {
         parent::displayHeader("Error");
         ?>
 
@@ -25,14 +31,14 @@ class MovieError extends MovieIndexView {
                 <td style="text-align: left; vertical-align: top;">
                     <h3> Sorry, but an error has occurred.</h3>
                     <div style="color: red">
-                        <?= urldecode($message) ?>
+                        <?= urldecode($this->message) ?>
                     </div>
                     <br>
                 </td>
             </tr>
         </table>
         <br><br><br><br><hr>
-        <a href="<?= BASE_URL ?>/movie/index">Back to movie list</a>
+        <a href="<?= BASE_URL ?>movie/index">Back to movie list</a>
         <?php
         //display page footer
         parent::displayFooter();

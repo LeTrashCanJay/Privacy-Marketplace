@@ -21,7 +21,7 @@ class Movie
     }
 
     //getters and setter
-    public function getId() {
+    public function getMovieId() {
         return $this->id;
     }
 

@@ -11,7 +11,12 @@ use Capstone\View\IndexView;
 
 require_once 'View/IndexView.php';
 require_once __DIR__ . '/config.php';
+
 $page_title = "Error";
+
+if (isset($message)) {
+    error_log("Error displayed: " . urldecode($message));
+}
 //display render
 IndexView::displayHeader($page_title);
 ?>
@@ -25,15 +30,14 @@ IndexView::displayHeader($page_title);
         <td style = "text-align: left; vertical-align: top;">
             <h3> Sorry, but an error has occurred.</h3>
             <div style = "color: red">
-                <?= urldecode($message)
-                ?>
+                <?= isset($message) ? htmlspecialchars(urldecode($message)) : 'An error has occurred. Please try again.'?>
             </div>
             <br>
         </td>
     </tr>
 </table>
 <br><br><br><br><hr>
-<a href="<?= BASE_URL ?>/index">Back to Main Page</a>
+<a href="<?= BASE_URL ?>index">Back to Main Page</a>
 
 <?php
 IndexView::displayFooter();

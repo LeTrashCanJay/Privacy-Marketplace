@@ -2,12 +2,12 @@
 /**
  * Author: Jay Jones
  * Date: 6/8/2025
- * File: database.class.php
+ * File: Database.php
  * Description: Setting up the Database details.
  * Code belongs mostly to Dr. Louie Zhu. Code has been adjusted for my usage.
  */
 
-namespace App;
+namespace Capstone;
 
 use mysqli;
 
@@ -37,6 +37,7 @@ class Database
             $this->param['host'], $this->param['login'], $this->param['password'], $this->param['database']
         );
         if (mysqli_connect_errno() != 0) {
+            error_log("Database connection failed" . mysqli_connect_error());
             $message = "Connecting database failed: " . mysqli_connect_error() . ".";
             include 'error.php';
             exit();
@@ -64,7 +65,7 @@ class Database
         return $this->param['tblMovies'];
     }
     public function getEbooks() {
-        return $this->param['tblEbooks'];
+        return $this->param['tblEBooks'];
     }
     public function getApps() {
         return $this->param['tblApps'];

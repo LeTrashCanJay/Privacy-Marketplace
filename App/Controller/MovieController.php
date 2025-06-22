@@ -29,12 +29,14 @@ class MovieController
         $movies = $this->movie_model->list_movies();
         if(!$movies) {
             //toss an error
+            error_log("MovieModel::list_movies() returned false. Possible DB error.");
             $message = "We've had an issue with displaying the movies. Please try again later.";
             $this->error($message);
+            return;
         }
 
-        $view = new MovieIndex();
-        $view->display($movies);
+        $view = new MovieIndex($movies);
+        $view->display();
 
     }
 

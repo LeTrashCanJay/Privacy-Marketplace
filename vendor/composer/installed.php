@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'jj147/privacy-marketplace',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '2e2e970a07b5f2c1156ea011088c448a3130a49c',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'jj147/privacy-marketplace' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '2e2e970a07b5f2c1156ea011088c448a3130a49c',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

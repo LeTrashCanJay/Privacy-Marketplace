@@ -13,7 +13,7 @@ error_reporting(E_ALL);
 date_default_timezone_set('America/New_York');
 
 //base url
-define("BASE_URL", "http://localhost/capstone/");
+define("BASE_URL", "http://localhost/capstone");
 
 /*****
  * movies

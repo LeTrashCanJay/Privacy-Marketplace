@@ -2,8 +2,7 @@
 
 namespace Capstone\Model\Movies;
 
-use App\Database;
-use Capstone\Model\Movies;
+use Capstone\Database;
 
 /**
  * Author: Jay Jones
@@ -52,20 +51,23 @@ class MovieModel
         $query = $this->dbConnection->query($sql);
 
         if (!$query) {
+            error_log("Query failed: " . $this->dbConnection->error . " | SQL: " . $sql);
             return false;
         }
 
-        if ($query->num_rows > 0) {
-            return 0;
+        if ($query->num_rows == 0) {
+            return [];
         }
 
         $movies = array();
 
         while ($obj = $query->fetch_object()) {
-            $movie = new Movie(stripslashes($obj->title), stripslashes($obj->price), stripslashes($obj->image_url));
-
+            $movie = new Movie(
+                stripslashes($obj->title ?? ''),
+                stripslashes($obj->price ?? ''),
+                stripslashes($obj->image_url ?? '')
+            );
             $movie->setId($obj->id);
-
             $movies[] = $movie;
         }
         return $movies;
@@ -73,17 +75,21 @@ class MovieModel
 
     public function view_movies($id)
     {
-        $sql = "SELECT * FROM " . $this->tblMovies . "WHERE " . $this->tblMovies . ".$id='$id'";
+        $idEscaped = $this->dbConnection->real_escape_string($id);
+        $sql = "SELECT * FROM " . $this->tblMovies . " WHERE id = '$id'";
+
 
         //execute
         $query = $this->dbConnection->query($sql);
 
         if ($query && $query->num_rows > 0) {
             $obj = $query->fetch_object();
-
             //create movie object
-            $movie = new Movie(stripslashes($obj->title), stripslashes($obj->price), stripslashes($obj->image_url));
-
+            $movie = new Movie(
+                stripslashes($obj->title ?? ''),
+                stripslashes($obj->price ?? ''),
+                stripslashes($obj->image_url ?? '')
+            );
             //set id
             $movie->setId($obj->id);
 

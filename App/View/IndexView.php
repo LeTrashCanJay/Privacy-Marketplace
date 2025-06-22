@@ -17,7 +17,8 @@ class IndexView
         <head>
             <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
             <title><?php echo $page_title ?></title>
-            <link rel="stylesheet" href="/public/css/styles.css">
+            <base href="/capstone/">
+            <link rel="stylesheet" href="public/css/styles.css">
             <script>
                 var base_url = "<?=BASE_URL?>";
             </script>
