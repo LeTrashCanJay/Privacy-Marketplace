@@ -11,6 +11,15 @@ class IndexView
 {
     public static function displayHeader($page_title)
     {
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        // Clear session flag after one use
+        if (!empty($_COOKIE["cookie_preferences_set"]) && !empty($_SESSION['cookie_preferences_set'])) {
+            unset($_SESSION['cookie_preferences_set']);
+        }
+
         ?>
         <!DOCTYPE html>
         <html lang="en">
@@ -37,6 +46,37 @@ class IndexView
                 </div>
             </a>
         </div>
+
+        <!-- Cookie Consent Pop-up -->
+        <?php
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (empty($_COOKIE["cookie_preferences_set"]) && empty($_SESSION['cookie_preferences_set'])):  ?>
+            <div id="cookie-popup" style="position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 20px; border-top: 2px solid #ccc; text-align: center; z-index: 9999;">
+                <form method="post" action="<?= BASE_URL ?>/cookie/save">
+                    <label>
+                        <input type="checkbox" name="strictly_necessary" checked disabled> Essential (always enabled)
+                    </label> &nbsp;
+
+                    <label>
+                        <input type="checkbox" name="performance"> Performance
+                    </label> &nbsp;
+
+                    <label>
+                        <input type="checkbox" name="analytics"> Analytics
+                    </label> &nbsp;
+
+                    <label>
+                        <input type="checkbox" name="advertising"> Advertising
+                    </label><br><br>
+
+                    <button type="submit" class="btn btn-primary">Save Preferences</button>
+                </form>
+            </div>
+        <?php endif; ?>
+
         <?php
     } //display header end
 
