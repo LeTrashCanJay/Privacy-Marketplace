@@ -2,21 +2,21 @@
 /**
  * Author: Jay Jones
  * Date: 6/22/2025
- * File: EBookIndexView.php
+ * File: WebappIndexView.php
  * Description:
  */
 
-namespace Capstone\View\ebook;
+namespace Capstone\View\webapps;
 use Capstone\View\home\HomeIndex;
 
-class EBookIndexView extends HomeIndex {
+class WebappIndexView extends HomeIndex {
     public static function displayHeader($title) {
         parent::displayHeader($title);
         ?>
         <script>
-            var media = "ebooks";
+            var media = "webapps";
         </script>
-    <?php
+        <?php
     }
 
     public static function displayFooter() {

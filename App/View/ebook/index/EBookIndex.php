@@ -20,7 +20,7 @@ class EBookIndex extends EBookIndexView {
     public function display() {
         parent::displayHeader("All E-Books");
         ?>
-        <div id="main-header">Movies in Stock</div>
+        <div id="main-header">E-Books in Stock</div>
 
         <div class="grid-container">
             <?php

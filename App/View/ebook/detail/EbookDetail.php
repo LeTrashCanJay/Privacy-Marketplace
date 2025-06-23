@@ -2,35 +2,35 @@
 /**
  * Author: Jay Jones
  * Date: 6/22/2025
- * File: MovieDetail.php
+ * File: EbookDetail.php
  * Description:
  */
 
-namespace Capstone\View\movie\detail;
+namespace Capstone\View\ebook\detail;
 
-use Capstone\View\movie\MovieIndexView;
-use Capstone\Model\Movies\Movie;
+use Capstone\View\ebook\EBookIndexView;
+use Capstone\Model\EBooks\EBook;
 
-class MovieDetail extends MovieIndexView {
+class EbookDetail extends EBookIndexView {
 
-    public function show($movie, $confirm = "") {
+    public function show($ebook, $confirm = "") {
         //display page header
         parent::displayHeader("Display Movie Details");
 
         //retrieve movie details by calling get methods
-        $id = $movie->getId();
-        $title = $movie->getTitle();
-        $price = $movie->getPrice();
-        $image = $movie->getImage();
-        $description = $movie->getDescription();
+        $id = $ebook->getId();
+        $title = $ebook->getTitle();
+        $price = $ebook->getPrice();
+        $image = $ebook->getImage();
+        $description = $ebook->getDescription();
 
 
         if (strpos($image, "http://") === false AND strpos($image, "https://") === false) {
-            $image = BASE_URL . '/' . MOVIE_IMG . $image;
+            $image = BASE_URL . '/' . BOOK_IMG . $image;
         }
         ?>
 
-        <div id="main-header">Movie Details</div>
+        <div id="main-header">E-Book Details</div>
         <hr>
         <!-- display movie details in a table -->
         <table id="detail">
@@ -55,7 +55,7 @@ class MovieDetail extends MovieIndexView {
                 </td>
             </tr>
         </table>
-        <a href="<?= BASE_URL ?>/movie/index">Go to Web-App List</a>
+        <a href="<?= BASE_URL ?>/ebook/index">Go to E-Book List</a>
 
         <?php
         //display page footer

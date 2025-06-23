@@ -2,21 +2,21 @@
 /**
  * Author: Jay Jones
  * Date: 6/22/2025
- * File: EBookIndexView.php
+ * File: GameIndexView.php
  * Description:
  */
 
-namespace Capstone\View\ebook;
+namespace Capstone\View\games;
 use Capstone\View\home\HomeIndex;
 
-class EBookIndexView extends HomeIndex {
+class GameIndexView extends HomeIndex {
     public static function displayHeader($title) {
         parent::displayHeader($title);
         ?>
         <script>
-            var media = "ebooks";
+            var media = "videogames";
         </script>
-    <?php
+        <?php
     }
 
     public static function displayFooter() {

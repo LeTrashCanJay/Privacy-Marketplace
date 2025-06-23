@@ -170,7 +170,7 @@ footer {
     margin: 2px
 }
 
-.movie-detail-img {
+.detail-img {
     max-width: 300px;  /* or whatever size you want */
     width: 100%;
     height: auto;

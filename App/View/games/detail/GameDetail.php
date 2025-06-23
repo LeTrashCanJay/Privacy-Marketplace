@@ -2,35 +2,35 @@
 /**
  * Author: Jay Jones
  * Date: 6/22/2025
- * File: MovieDetail.php
+ * File: EbookDetail.php
  * Description:
  */
 
-namespace Capstone\View\movie\detail;
+namespace Capstone\View\ebook\detail;
 
-use Capstone\View\movie\MovieIndexView;
-use Capstone\Model\Movies\Movie;
+use Capstone\View\games\GameIndexView;
+use Capstone\Model\Games\Games;
 
-class MovieDetail extends MovieIndexView {
+class GameDetail extends GameIndexView {
 
-    public function show($movie, $confirm = "") {
+    public function show($game, $confirm = "") {
         //display page header
         parent::displayHeader("Display Movie Details");
 
         //retrieve movie details by calling get methods
-        $id = $movie->getId();
-        $title = $movie->getTitle();
-        $price = $movie->getPrice();
-        $image = $movie->getImage();
-        $description = $movie->getDescription();
+        $id = $game->getId();
+        $title = $game->getTitle();
+        $price = $game->getPrice();
+        $image = $game->getImage();
+        $description = $game->getDescription();
 
 
         if (strpos($image, "http://") === false AND strpos($image, "https://") === false) {
-            $image = BASE_URL . '/' . MOVIE_IMG . $image;
+            $image = BASE_URL . '/' . GAME_IMG . $image;
         }
         ?>
 
-        <div id="main-header">Movie Details</div>
+        <div id="main-header">Video Game Details</div>
         <hr>
         <!-- display movie details in a table -->
         <table id="detail">
@@ -55,7 +55,7 @@ class MovieDetail extends MovieIndexView {
                 </td>
             </tr>
         </table>
-        <a href="<?= BASE_URL ?>/movie/index">Go to Web-App List</a>
+        <a href="<?= BASE_URL ?>/games/index">Go to Video Games List</a>
 
         <?php
         //display page footer
