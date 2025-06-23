@@ -24,17 +24,17 @@ class HomeIndex extends IndexView
         <div id="thumbnails" style="text-align: center; border: none">
             <p>Click the images to explore each storefront.</p>
 
-            <a href="<?= BASE_URL ?>movie/index">
-                <img src="<?= BASE_URL ?>/public/images/thumbnails/Movie.jpeg" title="Movie Library"/>
+            <a href="<?= BASE_URL ?>/movie/index">
+                <img src="<?= BASE_URL ?>/public/images/thumbnails/Movie.jpeg" title="Movies"/>
             </a>
-            <a href="<?= BASE_URL ?>ebook/index">
-                <img src="<?= BASE_URL ?>/public/images/thumbnails/Ebook.jpeg" title="Book Library"/>
+            <a href="<?= BASE_URL ?>/ebook/index">
+                <img src="<?= BASE_URL ?>/public/images/thumbnails/Ebook.jpeg" title="E-Books"/>
             </a>
-            <a href="<?= BASE_URL ?>games/index">
-                <img src="<?= BASE_URL ?>/public/images/thumbnails/Games.jpeg" title="Game Library"/>
+            <a href="<?= BASE_URL ?>/games/index">
+                <img src="<?= BASE_URL ?>/public/images/thumbnails/Games.jpeg" title="Video Games"/>
             </a>
-            <a href="<?= BASE_URL ?>apps/index">
-                <img src="<?= BASE_URL ?>/public/images/thumbnails/Webapp.jpeg" title="Music Library (Under Construction)"/>
+            <a href="<?= BASE_URL ?>/apps/index">
+                <img src="<?= BASE_URL ?>/public/images/thumbnails/Webapp.jpeg" title="Web-Apps"/>
             </a>
         </div>
         <br>
