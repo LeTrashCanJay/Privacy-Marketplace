@@ -65,7 +65,8 @@ class MovieModel
             $movie = new Movie(
                 stripslashes($obj->title ?? ''),
                 stripslashes($obj->price ?? ''),
-                stripslashes($obj->image_url ?? '')
+                stripslashes($obj->image_url ?? ''),
+                stripslashes($obj->description ?? '')
             );
             $movie->setId($obj->id);
             $movies[] = $movie;
@@ -88,7 +89,8 @@ class MovieModel
             $movie = new Movie(
                 stripslashes($obj->title ?? ''),
                 stripslashes($obj->price ?? ''),
-                stripslashes($obj->image_url ?? '')
+                stripslashes($obj->image_url ?? ''),
+                stripslashes($obj->description ?? '')
             );
             //set id
             $movie->setId($obj->id);

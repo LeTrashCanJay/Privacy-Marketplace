@@ -116,11 +116,6 @@ footer {
     background: 5px;
 }
 
-.store-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
 
 .item-card {
     flex: 0 0 30%;
@@ -128,13 +123,27 @@ footer {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
+    text-align: left;
+}
+
+.item-card img {
+    max-width: 100%;
+    height: auto;
+    width: 120px;
+    margin-bottom: 10px;
+    border-radius: 6px;
 }
 
 .grid-container{
-    margin: 10px auto 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin: 0 auto;
     width: 960px;
     border: 1px solid #eee;
     background-color: #ffebeb;
+    padding: 1rem;
 }
 
 #thumbnails a {
@@ -159,4 +168,51 @@ footer {
 #thumbnails img:hover {
     border: solid 6px #393ECE;
     margin: 2px
+}
+
+.movie-detail-img {
+    max-width: 300px;  /* or whatever size you want */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+}
+
+table#detail {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: solid 1px #bbb;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#detail img {
+    width: 220px;
+}
+
+#detail td {
+    position: relative;
+    vertical-align: top;
+    padding: 2px 12px 15px 0px;
+}
+
+#detail p {
+    padding: 3px;
+}
+
+#detail #button-group {
+    position: absolute;
+    bottom: 20px;
+}
+
+#detail #confirm-message {
+    position: absolute;
+    bottom: 20px;
+    color: red;
+}
+
+#detail .media-description {
+    max-height: 120px;
+    overflow: auto;
 }

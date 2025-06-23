@@ -11,17 +11,18 @@ namespace Capstone\Model\Movies;
 class Movie
 {
     //private members
-    private $id, $title, $price, $image_url;
+    private $id, $title, $price, $image_url, $description;
 
     //construct it
-    public function __construct($title, $price, $image_url) {
+    public function __construct($title, $price, $image_url, $description = "") {
         $this->title = $title;
         $this->price = $price;
         $this->image_url = $image_url;
+        $this->description = $description;
     }
 
     //getters and setter
-    public function getMovieId() {
+    public function getId() {
         return $this->id;
     }
 
@@ -34,6 +35,9 @@ class Movie
     }
     public function getImage() {
         return $this->image_url;
+    }
+    public function getDescription() {
+        return $this->description;
     }
 
     public function setId($id) {

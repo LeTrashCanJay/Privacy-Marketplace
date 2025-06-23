@@ -9,10 +9,11 @@
 namespace Capstone\View\movie\detail;
 
 use Capstone\View\movie\MovieIndexView;
+use Capstone\Model\Movies\Movie;
 
 class MovieDetail extends MovieIndexView {
 
-    public function display($movie, $confirm = "") {
+    public function show($movie, $confirm = "") {
         //display page header
         parent::displayHeader("Display Movie Details");
 
@@ -34,8 +35,8 @@ class MovieDetail extends MovieIndexView {
         <!-- display movie details in a table -->
         <table id="detail">
             <tr>
-                <td style="width: 150px;">
-                    <img src="<?= $image ?>" alt="<?= $title ?>" />
+                <td style="width: 200px;">
+                    <img src="<?= $image ?>" alt="<?= $title ?>" class="movie-detail-img" />
                 </td>
                 <td style="width: 130px;">
                     <p><strong>Title:</strong></p>

@@ -32,7 +32,7 @@ class MovieIndex extends MovieIndexView {
                 echo 'No movies found. <br><br><br><br><br>';
             } else {
                foreach($this->movies as $i => $movie) {
-                   $id = $movie->getMovieId();
+                   $id = $movie->getId();
                    $title = $movie->getTitle();
                    $price = $movie->getPrice();
                    $image = $movie->getImage();
@@ -44,10 +44,11 @@ class MovieIndex extends MovieIndexView {
                        echo "<div class='row'>";
                    }
 
-                   echo "<div class='store-grid'><p><a href='", BASE_URL, "/movie/detail/$id'><img src='" . $image .
-                       "'></a><span>$title<br>Price: $price</span></p></div>";
-                   ?>
-                    <?php
+                   echo "<div class='item-card'>";
+                   echo "<p><a href='", BASE_URL, "/movie/detail/$id'><img src='" . $image . "'></a><br>";
+                   echo "<span>$title<br>Price: $price</span></p>";
+                   echo "</div>";
+
                     if ($i % 6 == 5 || $i == count($this->movies) - 1) {
                         echo "</div>";
                     }

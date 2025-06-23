@@ -51,7 +51,7 @@ class MovieController
         }
 
         $view = new MovieDetail();
-        $view->display($movie);
+        $view->show($movie);
 
     }
 
