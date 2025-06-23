@@ -6,11 +6,11 @@
  * Description:
  */
 
-namespace Capstone\View\movie\error;
+namespace Capstone\View\ebook\error;
 
-use Capstone\View\movie\MovieIndexView;
+use Capstone\View\ebook\EBookIndexView;
 
-class MovieError extends MovieIndexView {
+class EBookError extends EBookIndexView {
     private string $message;
 
     public function __construct(string $message = "An unknown error occurred.") {
@@ -38,7 +38,7 @@ class MovieError extends MovieIndexView {
             </tr>
         </table>
         <br><br><br><br><hr>
-        <a href="<?= BASE_URL ?>movie/index">Back to Movie List</a>
+        <a href="<?= BASE_URL ?>ebook/index">Back to E-Book List</a>
         <?php
         //display page footer
         parent::displayFooter();

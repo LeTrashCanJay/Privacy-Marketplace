@@ -2,15 +2,14 @@
 /**
  * Author: Jay Jones
  * Date: 6/22/2025
- * File: MovieError.php
+ * File: GameError.php
  * Description:
  */
 
-namespace Capstone\View\movie\error;
+namespace Capstone\View\games\error;
+use Capstone\View\games\GameIndexView;
 
-use Capstone\View\movie\MovieIndexView;
-
-class MovieError extends MovieIndexView {
+class GameError extends GameIndexView {
     private string $message;
 
     public function __construct(string $message = "An unknown error occurred.") {
@@ -38,7 +37,7 @@ class MovieError extends MovieIndexView {
             </tr>
         </table>
         <br><br><br><br><hr>
-        <a href="<?= BASE_URL ?>movie/index">Back to Movie List</a>
+        <a href="<?= BASE_URL ?>games/index">Back to Games List</a>
         <?php
         //display page footer
         parent::displayFooter();
