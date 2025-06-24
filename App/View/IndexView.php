@@ -20,6 +20,10 @@ class IndexView
             unset($_SESSION['cookie_preferences_set']);
         }
 
+        $isLoggedIn = !empty($_SESSION['user_id']);
+        $userEmail = $isLoggedIn && !empty($_SESSION['user_email']) ? $_SESSION['user_email'] : '';
+
+
         ?>
         <!DOCTYPE html>
         <html lang="en">
@@ -33,6 +37,25 @@ class IndexView
             </script>
         </head>
         <body>
+
+        <nav class="navBar">
+            <div class="nav-left">
+                <a href="<?= BASE_URL ?>/index.php" style="color: inherit; text-decoration: none; font-weight: bold; font-size: 1.2rem;">
+                    Privacy Market
+                </a>
+            </div>
+            <div class="nav-right">
+                <?php if ($isLoggedIn): ?>
+                    <span>Welcome, <?= htmlspecialchars($userEmail) ?></span>
+                    <a href="<?= BASE_URL ?>/user/logout">Logout</a>
+                    <a href="<?= BASE_URL ?>/cart/view">Cart</a>
+                <?php else: ?>
+                    <a href="<?= BASE_URL ?>/user/loginForm">Login</a>
+                    <a href="<?= BASE_URL ?>/user/registerForm">Register</a>
+                <?php endif; ?>
+            </div>
+        </nav>
+
         <div id="top"></div>
         <div id='wrapper'>
         <div id="banner">
