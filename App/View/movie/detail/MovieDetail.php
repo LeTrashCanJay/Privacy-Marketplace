@@ -43,8 +43,11 @@ class MovieDetail extends MovieIndexView {
                     <p><strong>Description:</strong></p>
                     <p><strong>Price: </strong></p>
                     <div id="button-group">
-                        <input type="button" id="edit-button" value="   Edit   "
-                               onclick="window.location.href = '<?= BASE_URL ?>/movie/edit/<?= $id ?>'">&nbsp;
+                        <form method="post" action="<?= BASE_URL ?>/cart/add">
+                            <input type="hidden" name="item_id" value="<?= htmlspecialchars($movie->getId()) ?>">
+                            <input type="hidden" name="item_type" value="movie">
+                            <button type="submit">Add to Cart</button>
+                        </form>
                     </div>
                 </td>
                 <td>

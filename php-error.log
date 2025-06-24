@@ -14,3 +14,88 @@ Stack trace:
 [22-Jun-2025 17:51:07 America/New_York] PHP Deprecated:  stripslashes(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\capstone\App\Model\Movies\MovieModel.php on line 68
 [22-Jun-2025 17:51:07 America/New_York] PHP Deprecated:  stripslashes(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\capstone\App\Model\Movies\MovieModel.php on line 68
 [22-Jun-2025 17:51:07 America/New_York] PHP Deprecated:  stripslashes(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\capstone\App\Model\Movies\MovieModel.php on line 68
+[22-Jun-2025 18:07:29 America/New_York] PHP Fatal error:  Declaration of Capstone\View\movie\detail\MovieDetail::display($movie, $confirm = '') must be compatible with Capstone\View\home\HomeIndex::display() in C:\xampp\htdocs\capstone\App\View\movie\detail\MovieDetail.php on line 15
+[22-Jun-2025 18:16:24 America/New_York] PHP Fatal error:  Declaration of Capstone\View\movie\detail\MovieDetail::display($movie, $confirm = '') must be compatible with Capstone\View\home\HomeIndex::display() in C:\xampp\htdocs\capstone\App\View\movie\detail\MovieDetail.php on line 15
+[22-Jun-2025 18:19:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method Capstone\Model\Movies\Movie::getId() in C:\xampp\htdocs\capstone\App\View\movie\detail\MovieDetail.php:20
+Stack trace:
+#0 C:\xampp\htdocs\capstone\App\Controller\MovieController.php(54): Capstone\View\movie\detail\MovieDetail->show(Object(Capstone\Model\Movies\Movie))
+#1 [internal function]: Capstone\Controller\MovieController->detail('3')
+#2 C:\xampp\htdocs\capstone\App\Dispatcher.php(104): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
+#4 {main}
+  thrown in C:\xampp\htdocs\capstone\App\View\movie\detail\MovieDetail.php on line 20
+[22-Jun-2025 18:21:41 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method Capstone\Model\Movies\Movie::getDescription() in C:\xampp\htdocs\capstone\App\View\movie\detail\MovieDetail.php:25
+Stack trace:
+#0 C:\xampp\htdocs\capstone\App\Controller\MovieController.php(54): Capstone\View\movie\detail\MovieDetail->show(Object(Capstone\Model\Movies\Movie))
+#1 [internal function]: Capstone\Controller\MovieController->detail('3')
+#2 C:\xampp\htdocs\capstone\App\Dispatcher.php(104): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
+#4 {main}
+  thrown in C:\xampp\htdocs\capstone\App\View\movie\detail\MovieDetail.php on line 25
+[22-Jun-2025 18:22:54 America/New_York] PHP Deprecated:  Creation of dynamic property Capstone\Model\Movies\Movie::$description is deprecated in C:\xampp\htdocs\capstone\App\Model\Movies\Movie.php on line 21
+[22-Jun-2025 18:23:59 America/New_York] PHP Deprecated:  Creation of dynamic property Capstone\Model\Movies\Movie::$description is deprecated in C:\xampp\htdocs\capstone\App\Model\Movies\Movie.php on line 21
+[22-Jun-2025 19:00:21 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method Capstone\Model\Movies\Movie::getMovieId() in C:\xampp\htdocs\capstone\App\View\movie\index\MovieIndex.php:35
+Stack trace:
+#0 C:\xampp\htdocs\capstone\App\Controller\MovieController.php(39): Capstone\View\movie\index\MovieIndex->display()
+#1 [internal function]: Capstone\Controller\MovieController->index()
+#2 C:\xampp\htdocs\capstone\App\Dispatcher.php(104): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
+#4 {main}
+  thrown in C:\xampp\htdocs\capstone\App\View\movie\index\MovieIndex.php on line 35
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 18:05:06 America/New_York] PHP Warning:  Undefined array key "HTTP_REFERER" in C:\xampp\htdocs\capstone\App\Controller\CookieController.php on line 29
+[23-Jun-2025 19:56:49 America/New_York] PHP Warning:  Undefined array key "user_email" in C:\xampp\htdocs\capstone\App\View\IndexView.php on line 24
+[23-Jun-2025 19:59:25 America/New_York] PHP Warning:  Undefined property: Capstone\Controller\UserController::$userModel in C:\xampp\htdocs\capstone\App\Controller\UserController.php on line 95
+[23-Jun-2025 19:59:25 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function verifyCredentials() on null in C:\xampp\htdocs\capstone\App\Controller\UserController.php:95
+Stack trace:
+#0 [internal function]: Capstone\Controller\UserController->login()
+#1 C:\xampp\htdocs\capstone\App\Dispatcher.php(104): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
+#3 {main}
+  thrown in C:\xampp\htdocs\capstone\App\Controller\UserController.php on line 95
+[23-Jun-2025 20:04:16 America/New_York] PHP Warning:  Undefined variable $itemsInCart in C:\xampp\htdocs\capstone\App\Controller\CartController.php on line 133
+[23-Jun-2025 20:04:16 America/New_York] PHP Fatal error:  Uncaught TypeError: Capstone\View\cart\CartView::__construct(): Argument #1 ($items) must be of type array, null given, called in C:\xampp\htdocs\capstone\App\Controller\CartController.php on line 133 and defined in C:\xampp\htdocs\capstone\App\View\cart\CartView.php:18
+Stack trace:
+#0 C:\xampp\htdocs\capstone\App\Controller\CartController.php(133): Capstone\View\cart\CartView->__construct(NULL)
+#1 [internal function]: Capstone\Controller\CartController->view()
+#2 C:\xampp\htdocs\capstone\App\Dispatcher.php(104): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
+#4 {main}
+  thrown in C:\xampp\htdocs\capstone\App\View\cart\CartView.php on line 18
+[23-Jun-2025 20:11:02 America/New_York] PHP Warning:  Undefined array key "product" in C:\xampp\htdocs\capstone\App\View\cart\CartView.php on line 39
+[23-Jun-2025 20:11:02 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function getTitle() on null in C:\xampp\htdocs\capstone\App\View\cart\CartView.php:44
+Stack trace:
+#0 C:\xampp\htdocs\capstone\App\Controller\CartController.php(136): Capstone\View\cart\CartView->display()
+#1 [internal function]: Capstone\Controller\CartController->view()
+#2 C:\xampp\htdocs\capstone\App\Dispatcher.php(104): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
+#4 {main}
+  thrown in C:\xampp\htdocs\capstone\App\View\cart\CartView.php on line 44
+[23-Jun-2025 20:59:29 America/New_York] PHP Warning:  Undefined array key "item" in C:\xampp\htdocs\capstone\App\View\cart\CartView.php on line 39
+[23-Jun-2025 20:59:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function getTitle() on null in C:\xampp\htdocs\capstone\App\View\cart\CartView.php:43
+Stack trace:
+#0 C:\xampp\htdocs\capstone\App\Controller\CartController.php(136): Capstone\View\cart\CartView->display()
+#1 [internal function]: Capstone\Controller\CartController->view()
+#2 C:\xampp\htdocs\capstone\App\Dispatcher.php(104): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
+#4 {main}
+  thrown in C:\xampp\htdocs\capstone\App\View\cart\CartView.php on line 43
