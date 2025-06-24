@@ -64,7 +64,7 @@ class GamesModel {
                 stripslashes($obj->image_url ?? ''),
                 stripslashes($obj->description ?? '')
             );
-            $games->setId($obj->id);
+            $game->setId($obj->id);
             $games[] = $game;
         }
         return $games;

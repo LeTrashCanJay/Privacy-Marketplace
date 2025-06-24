@@ -33,7 +33,7 @@ class HomeIndex extends IndexView
             <a href="<?= BASE_URL ?>/games/index">
                 <img src="<?= BASE_URL ?>/public/images/thumbnails/Games.jpeg" title="Video Games"/>
             </a>
-            <a href="<?= BASE_URL ?>/apps/index">
+            <a href="<?= BASE_URL ?>/webapps/index">
                 <img src="<?= BASE_URL ?>/public/images/thumbnails/Webapp.jpeg" title="Web-Apps"/>
             </a>
         </div>

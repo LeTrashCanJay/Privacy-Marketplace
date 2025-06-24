@@ -66,7 +66,7 @@ class CartView extends HomeIndex
         }
 
         echo "<br><a class='btn btn-primary' href='" . BASE_URL . "/index'>Continue Shopping</a>";
-        echo " | <a class='btn btn-success' href='#'>Checkout</a>";
+        echo " | <a class='btn btn-success' href='" . BASE_URL . "/checkout'>Checkout</a>";
         echo "</div>";
 
         parent::displayFooter();

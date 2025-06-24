@@ -2,7 +2,7 @@
 /**
  * Author: Jay Jones
  * Date: 6/22/2025
- * File: AppsController.php
+ * File: WebappsController.php
  * Description:
  */
 
@@ -13,7 +13,7 @@ use Capstone\View\webapps\index\WebappIndex;
 use Capstone\View\webapps\detail\WebappDetail;
 use Capstone\View\webapps\error\WebappError;
 
-class AppsController
+class WebappsController
 {
     private $webapp_model;
 

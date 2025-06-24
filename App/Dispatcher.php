@@ -83,6 +83,19 @@ class Dispatcher
             array_shift($urlParts);
         }
 
+        $map = [
+            'games' => 'Game',
+            'movies' => 'Movie',
+            'ebooks' => 'Ebook',
+            'webapps' => 'Webapp',
+        ];
+
+        $controllerName = $urlParts[0] ?? 'Home';
+
+        if (array_key_exists(strtolower($controllerName), $map)) {
+            $controllerName = $map[strtolower($controllerName)];
+        }
+
         $controllerSegment = ucfirst($urlParts[0] ?? 'Home') . 'Controller';
         $method = $urlParts[1] ?? 'index';
         $args = array_slice($urlParts, 2);

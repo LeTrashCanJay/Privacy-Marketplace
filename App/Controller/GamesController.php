@@ -2,7 +2,7 @@
 /**
  * Author: Jay Jones
  * Date: 6/22/2025
- * File: GameController.php
+ * File: GamesController.php
  * Description:
  */
 
@@ -13,7 +13,7 @@ use Capstone\View\games\index\GameIndex;
 use Capstone\View\ebook\detail\GameDetail;
 use Capstone\View\games\error\GameError;
 
-class GameController
+class GamesController
 {
     private $game_model;
 

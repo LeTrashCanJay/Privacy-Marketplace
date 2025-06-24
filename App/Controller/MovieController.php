@@ -11,8 +11,7 @@ use Capstone\View\movie\error\MovieError;
  * Author: Jay Jones
  * Date: 6/8/2025
  * File: MovieController.php
- * Description: Controller for the movie items
- * Code belongs to Dr. Louie Zhu with minor adjustments for my purposes.
+ * Description:
  */
 class MovieController
 {

@@ -99,3 +99,19 @@ Stack trace:
 #3 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
 #4 {main}
   thrown in C:\xampp\htdocs\capstone\App\View\cart\CartView.php on line 43
+[23-Jun-2025 22:22:23 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function setId() on array in C:\xampp\htdocs\capstone\App\Model\Games\GamesModel.php:67
+Stack trace:
+#0 C:\xampp\htdocs\capstone\App\Controller\GameController.php(28): Capstone\Model\Games\GamesModel->list_games()
+#1 [internal function]: Capstone\Controller\GameController->index()
+#2 C:\xampp\htdocs\capstone\App\Dispatcher.php(104): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
+#4 {main}
+  thrown in C:\xampp\htdocs\capstone\App\Model\Games\GamesModel.php on line 67
+[23-Jun-2025 22:28:10 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function setId() on array in C:\xampp\htdocs\capstone\App\Model\Games\GamesModel.php:67
+Stack trace:
+#0 C:\xampp\htdocs\capstone\App\Controller\GamesController.php(28): Capstone\Model\Games\GamesModel->list_games()
+#1 [internal function]: Capstone\Controller\GamesController->index()
+#2 C:\xampp\htdocs\capstone\App\Dispatcher.php(117): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\capstone\index.php(24): Capstone\Dispatcher::dispatch()
+#4 {main}
+  thrown in C:\xampp\htdocs\capstone\App\Model\Games\GamesModel.php on line 67

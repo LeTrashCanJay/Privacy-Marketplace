@@ -113,9 +113,19 @@ class UserController {
     // Logout user
     public function logout()
     {
-        session_start();
-        session_unset();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $_SESSION = [];
+
         session_destroy();
+
+        if (isset($_COOKIE['cookie_preferences_set'])) {
+            unset($_COOKIE['cookie_preferences_set']);
+            setcookie('cookie_preferences_set', '', time() - 3600, '/');
+        }
+
         header("Location: " . BASE_URL . "/index");
         exit();
     }
